@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">RecylerViewDika</string>
+
+    <string name="heroes_name">Kepulauan N</string>
+    <string name="description">Deskripsi</string>
+    <string name="tab_text_1">List</string>
+    <string name="tab_text_2">Grid</string>
+    <string name="tab_text_3">CardView</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="created_by_andika_kurnia_sandi_yuda">Created By : Andika Kurnia Sandi Yuda</string>
+    <string-array name="data_name">
+        <item>Pura Besakih</item>
+        <item>Kepulauan Derawan</item>
+        <item>Taman Nasional Way Kambas</item>
+        <item>Pantai Parai Tenggiri (Bangka Belitung)</item>
+        <item>Nusa Dua (Bali)</item>
+        <item>Gunung Rinjani (Lombok, NTB)</item>
+        <item>Danau Toba (Sumatera Utara)</item>
+        <item>Nusa Penida (Bali)</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>Pura Agung Besakih is the largest and grandest temple in Bali. This island is located in Besakih Village, Rendang District, on the southwest slope of Mount Agung, the highest mountain in Bali. Pura Agung Besakih has a stunning Balinese architectural style and sits a stunning 915 feet at the foot of Mount Agung. The building, which was built since the 10th century AD, has become the center of Hindu Dharma spiritual activities on the Island of the Gods.</item>
+        <item>The Derawan Islands are an archipelago located in Berau Regency, East Kalimantan. In these islands there are a number of charming marine tourism objects, one of which is the Underwater Park which is of interest to foreign tourists, especially world-class divers. When you first set foot here, don\'t be surprised if Toppers will be greeted with a dazzling stretch of white sand. The color of the water is very clear will also make you feel at home to linger in this area. This natural panorama is the main holiday dish for tourists to visit.</item>
+        <item>Way Kambas National Park (TNKW) Lampung was designated as the 36th ASEAN Heritage Park area, on July 25, 2016. This means that Way Kambas National Park is the 4th ASEAN Heritage Park in Indonesia. Located at the southern tip of Sumatra or 110 km from Bandar Lampung, TNKW is one of the first and oldest National Parks in Indonesia. This National Park occupies 1,300 sq km of coastal lowland forest around the Way Kambas River on the east coast of Lampung Province.</item>
+        <item>Surely some of you have seen the popular film Laskar Pelangi which is set in Pulang Belitung, right? In addition to the interesting storyline, the location of this film also grabs the attention of the audience. Unlike other beaches in general, Parai Tenggiri has a sloping beach structure with turquoise green sea water and soft white sand. The waves on this beach are also calm so that it becomes one of the attractive reasons for tourists who like to swim.</item>
+        <item>This island of a thousand gods does not need to be doubted regarding its beauty and charm in attracting domestic and foreign tourists. In Bali, there is one tourist spot that is so beautiful, namely Nusa Dua. This beach attraction has soft white sand and clear blue sea water. You will be spoiled with various facilities when visiting this one place. Starting from classy inns and resorts, restaurants, shopping centers, to surfing activities on the beach.</item>
+        <item>Besides Gili Trawangan, in West Nusa Tenggara there is also a tour that is no less popular and suitable for those of you who like to climb, namely Mount Rinjani. This mountain is the second highest volcano in Indonesia. Mount Rinjani has the most beautiful scenery in Asia with edelweiss flower beds and Segara Anak Lake. This place can also be an interesting spot for climbers to set up tents, take a warm bath, or fish.</item>
+        <item>Toppers been to Lake Toba? This lake of unparalleled beauty is the largest volcanic lake in Southeast Asia and the second largest in the world after Lake Victoria. Lake Toba has long been known as one of the favorite Indonesian tourist attractions that have been frequently visited since the 1980s, you know!</item>
+        <item>The island of Bali, it is undeniable that its name is rampant throughout the world because of its beautiful scenery, culture that is still thick and its beaches are exotic. When Toppers visit Bali, don\'t be surprised if there are so many tourists passing by there, some even live in Bali, you know!</item>
+    </string-array>
+    <string-array name="data_photo">
+        <item>https://www.rentalmobilbali.net/wp-content/uploads/2012/09/Pura-Besakih-Karangasem-Bali-Twitter.jpg</item>
+        <item>https://totabuan.news/wp-content/uploads/2020/01/pulau-derawan.jpg</item>
+        <item>https://storage.googleapis.com/allindonesiatoursim/2018/03/eb73e861-waykambastrek21-1.jpg</item>
+        <item>https://www.pantainesia.com/wp-content/uploads/2018/08/pantai-parai-tenggiri.jpg</item>
+        <item>https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/bali-nusa-tenggara/Nusadua_3.jpg</item>
+        <item>https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/08/14/1785503838.jpg</item>
+        <item>https://www.panduasia.com/www/assets/blog_images/panduan-wisata-terbaru-di-danau-toba-sumatera-utara-2020.jpg</item>
+        <item>https://www.itrip.id/wp-content/uploads/2020/12/Wisata-Nusa-Penida-Bali.jpg</item>
+    </string-array>
+    <string name="title_activity_tabbing">tabbing</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Settings</string>
+
+</resources>

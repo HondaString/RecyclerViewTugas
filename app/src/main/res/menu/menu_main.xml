@@ -2,17 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_list"
-        android:title="@string/list"
-        app:showAsAction="never" />
+        android:id="@+id/action_setting"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_grid"
-        android:title="@string/grid"
-        app:showAsAction="never" />
+<!--    <item-->
+<!--        android:id="@+id/action_grid"-->
+<!--        android:title="@string/grid"-->
+<!--        app:showAsAction="never" />-->
 
-    <item
-        android:id="@+id/action_cardview"
-        android:title="@string/with_cardview"
-        app:showAsAction="never" />
+<!--    <item-->
+<!--        android:id="@+id/action_cardview"-->
+<!--        android:title="@string/with_cardview"-->
+<!--        app:showAsAction="never" />-->
+
 </menu>
