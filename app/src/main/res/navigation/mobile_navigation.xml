@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/story_navigation"
+    app:startDestination="@id/navigation_list">
+
+    <fragment
+        android:id="@+id/navigation_card"
+        android:name="com.infinite.recylerviewdika.presentation.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" />
+    <fragment
+        android:id="@+id/navigation_grid"
+        android:name="com.infinite.recylerviewdika.presentation.GridFragment"
+        android:label="fragment_grid"
+        tools:layout="@layout/fragment_grid" />
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.infinite.recylerviewdika.presentation.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+</navigation>

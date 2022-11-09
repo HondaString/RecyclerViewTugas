@@ -19,7 +19,6 @@ class CardFragment : Fragment() {
     // untuk ganti orientation
     private var mode: Int = 0
 
-// untuk support ganti orientation
     companion object {
         private const val STATE_LIST = "state_list"
         private const val TITLE = "Card"

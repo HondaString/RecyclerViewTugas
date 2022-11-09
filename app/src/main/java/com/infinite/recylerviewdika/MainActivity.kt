@@ -6,158 +6,20 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
+import com.infinite.recylerviewdika.databinding.ActivityMainBinding
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.StringRes
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.infinite.recylerviewdika.cardview.CardViewHeroAdapter
-import com.infinite.recylerviewdika.databinding.ActivityMainBinding
-import com.infinite.recylerviewdika.grid.GridHeroAdapter
-import com.infinite.recylerviewdika.list.ListHeroAdapter
+
 
 class MainActivity : AppCompatActivity() {
-//    private var title = "Model List"
-//
-//    private lateinit var binding: ActivityMainBinding
-//    private val list = ArrayList<Hero>()
-//
-//    // untuk ganti orientation
-//    private var mode: Int = 0
-//
-//    // untuk support ganti orientation
-//    companion object {
-//        private const val STATE_TITLE = "state_String"
-//        private const val STATE_LIST = "state_list"
-//        private const val STATE_MODE = "state_mode"
-//    }
-//
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//        binding.rvHeroes.setHasFixedSize(true)
-//
-//        // untuk ganti orientation
-//        if (savedInstanceState == null) {
-//            setActionBarTitle(title)
-//            list.addAll(getListHeroes())
-//            showRecyclerList()
-//            mode = R.id.action_list
-//        } else {
-//            title = savedInstanceState.getString(STATE_TITLE).toString()
-//            val stateList = savedInstanceState.getParcelableArrayList<Hero>(STATE_LIST)
-//            val stateMode = savedInstanceState.getInt(STATE_MODE)
-//
-//            setActionBarTitle(title)
-//            if (stateList != null) {
-//                list.addAll(stateList)
-//            }
-//            setMode(stateMode)
-//        }
-//
-//        list.addAll(getListHeroes())
-//        showRecyclerList()
-//        setActionBarTitle(title)
-//    }
-//
-//    private fun setActionBarTitle(title: String) {
-//        supportActionBar?.title = title
-//    }
-//
-//    private fun getListHeroes(): ArrayList<Hero> {
-//        val dataName = resources.getStringArray(R.array.data_name)
-//        val dataDescription = resources.getStringArray(R.array.data_description)
-//        val dataPhoto = resources.getStringArray(R.array.data_photo)
-//
-//        val listHero = ArrayList<Hero>()
-//        for (position in dataName.indices) {
-//            val hero = Hero(
-//                dataName[position],
-//                dataDescription[position],
-//                dataPhoto[position]
-//            )
-//            listHero.add(hero)
-//        }
-//        return listHero
-//    }
-//
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//        outState.putString(STATE_LIST, title)
-//        outState.putParcelableArrayList(STATE_LIST, list)
-//        outState.putInt(STATE_MODE, mode)
-//    }
-//
-//    private fun showRecyclerList() {
-//        binding.rvHeroes.layoutManager = LinearLayoutManager(this)
-//        val listHeroAdapter = ListHeroAdapter(list)
-//        binding.rvHeroes.adapter = listHeroAdapter
-//
-//        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
-//            override fun onItemClicked(data: Hero) {
-//                showSelectedHero(data)
-//            }
-//        })
-//    }
-//
-//    // untuk grid
-//    private fun showRecyclerGrid() {
-//        binding.rvHeroes.layoutManager = GridLayoutManager(this, 2)
-//        val gridHeroAdapter = GridHeroAdapter(list)
-//        binding.rvHeroes.adapter = gridHeroAdapter
-//
-//        gridHeroAdapter.setOnItemClickCallback(object : GridHeroAdapter.OnItemClickCallback {
-//            override fun onItemClicked(data: Hero) {
-//                showSelectedHero(data)
-//            }
-//        })
-//    }
-//
-//    // untuk cardview
-//    private fun showRecyclerCardView() {
-//        binding.rvHeroes.layoutManager = LinearLayoutManager(this)
-//        val cardViewAdapter = CardViewHeroAdapter(list)
-//        binding.rvHeroes.adapter = cardViewAdapter
-//    }
-//
-//    private fun showSelectedHero(hero: Hero) {
-//        Toast.makeText(this, "Kamu memilih ${hero.name}", Toast.LENGTH_SHORT).show()
-//    }
-//
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        menuInflater.inflate(R.menu.menu_main, menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-//
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        setMode(item.itemId)
-//        return super.onOptionsItemSelected(item)
-//    }
-//
-//    private fun setMode(selectedMode: Int) {
-//        when (selectedMode) {
-//            R.id.action_list -> {
-//                title = "Mode List"
-//                showRecyclerList()
-//            }
-//            R.id.action_grid -> {
-//                title = "Mode Grid"
-//                showRecyclerGrid()
-//            }
-//            R.id.action_cardview -> {
-//                title = "Mode CardView"
-//                showRecyclerCardView()
-//            }
-//        }
-//        mode = selectedMode
-//        setActionBarTitle(title)
-//    }
 
     companion object {
         @StringRes
@@ -168,9 +30,13 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private val binding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
         val viewPager: ViewPager2 = findViewById(R.id.view_pager)
@@ -180,6 +46,17 @@ class MainActivity : AppCompatActivity() {
             tab.text = resources.getString(TAB_TITLES[position])
         }.attach()
         supportActionBar?.elevation = 0f
+//        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        val appBarConfiguration = AppBarConfiguration.Builder(
+            R.id.navigation_list, R.id.navigation_grid, R.id.navigation_card
+        ).build()
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.navView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -190,6 +67,22 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_setting -> startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+            R.id.action_fragment -> {
+                val viewPager = findViewById<ViewPager2>(R.id.view_pager)
+                viewPager.visibility = View.GONE
+                binding.tabs.visibility = View.GONE
+                binding.navView.visibility = View.VISIBLE
+                binding.navFragment.navHostFragment.visibility = View.VISIBLE
+                Toast.makeText(this,"Fragment Mode", Toast.LENGTH_SHORT).show()
+            }
+            R.id.action_viewPager -> {
+                binding.navFragment.navHostFragment.visibility = View.GONE
+                binding.viewPager.visibility = View.VISIBLE
+                binding.tabs.visibility = View.VISIBLE
+                binding.navView.visibility = View.GONE
+                Toast.makeText(this,"ViewPager Mode", Toast.LENGTH_SHORT).show()
+
+            }
         }
         return super.onOptionsItemSelected(item)
     }

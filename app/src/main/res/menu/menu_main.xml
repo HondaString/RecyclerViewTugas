@@ -7,10 +7,17 @@
         android:icon="@drawable/ic_baseline_settings_24"
         app:showAsAction="always" />
 
-<!--    <item-->
-<!--        android:id="@+id/action_grid"-->
-<!--        android:title="@string/grid"-->
-<!--        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_fragment"
+        android:title="fragment"
+        android:icon="@drawable/ic_baseline_list_24"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_viewPager"
+        android:title="View Pager"
+        android:icon="@drawable/ic_baseline_view_pager_24"
+        app:showAsAction="never" />
 
 <!--    <item-->
 <!--        android:id="@+id/action_cardview"-->
