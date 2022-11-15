@@ -29,7 +29,6 @@ class FavouritesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this me.arwazkhan.bookhub.fragment
         val view = inflater.inflate(R.layout.fragment_favourites, container, false)
 
         recyclerFavourite = view.findViewById(R.id.recyclerFavourite)
