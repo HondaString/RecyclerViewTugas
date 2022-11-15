@@ -9,39 +9,26 @@
 
     <ImageView
         android:id="@+id/book"
-        android:layout_width="146dp"
-        android:layout_height="133dp"
+        android:layout_width="224dp"
+        android:layout_height="239dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginBottom="383dp"
-        android:src="@drawable/icons8_bookshelf" />
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="276dp"
+        android:src="@drawable/book_app_icon_web" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BookHub"
-        android:textColor="@color/white"
-        android:textSize="55sp"
-        android:fontFamily="@font/playlist"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="250dp">
-
-    </TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Therapy for your soul"
+        android:layout_marginBottom="145dp"
         android:fontFamily="@font/raleway"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="200dp">
+        android:text="Andika Kurnia Sandi Yuda"
+        android:textColor="@color/black"
+        android:textSize="30sp">
 
     </TextView>
 
